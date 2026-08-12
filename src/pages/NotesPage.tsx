@@ -1,4 +1,4 @@
-import NoteRow from "@/components/NoteRow";
+import NoteRow from "@/components/ui/NoteRow";
 import { notes } from "@/content";
 import type { Page } from "@/types/navigation";
 

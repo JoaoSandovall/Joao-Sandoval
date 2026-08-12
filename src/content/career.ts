@@ -3,7 +3,7 @@ export type Job = {
   company: string;
   period: string;
   description: string;
-  freelanceProjects?: string[];
+  projectSlugs?: string[];
 };
 
 export const experience: Job[] = [
@@ -12,14 +12,15 @@ export const experience: Job[] = [
     company: "MIDR — Brasília",
     period: "Abr 2025 — Jun 2026",
     description:
-      "API assíncrona em FastAPI para auditoria de documentos com RegEx, Pydantic e IA, além da reestruturação do Business Intelligence do setor em Power BI e DAX.",
+      "Desenvolvimento do projeto de Verificação de Minuta, uma API assíncrona em FastAPI para auditoria automatizada de documentos oficiais usando RegEx, validação com Pydantic e IA. Além disso, atuei na reestruturação do Business Intelligence do setor utilizando Power BI e DAX.",
+    projectSlugs: ["auditor-de-minutas"],
   },
   {
     role: "Jovem Aprendiz Técnico de Rede",
     company: "Claro — Brasília",
     period: "Out 2024 — Abr 2025",
     description:
-      "Suporte técnico no monitoramento de redes, cabos e fibras, com organização de dados, análise de rotas e identificação de danos físicos.",
+      "Suporte Administrativo focado no monitoramento de infraestrutura de redes, cabos e fibras ópticas. Atuei na organização de dados, análise contínua de rotas e identificação de danos físicos para manter a estabilidade da operação.",
   },
 ];
 
@@ -27,7 +28,7 @@ export const freelancer = {
   role: "Desenvolvedor Front-end Freelancer",
   period: "Mai 2026 — Atual",
   description:
-    "Atuo de forma independente desenvolvendo SPAs e landing pages para clientes reais. Cada projeto vai do levantamento de requisitos até o deploy em produção, usando React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix e Vite. Abaixo, os dois projetos entregues.",
+    "Atuo de forma independente no ciclo completo de desenvolvimento de SPAs e landing pages para clientes reais, indo do levantamento de requisitos ao deploy em produção. Utilizo React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix e Vite para entregar interfaces rápidas e acessíveis.",
   projectSlugs: ["ipa-psicologia", "la-da-roca"],
 };
 
@@ -49,6 +50,6 @@ export const education = {
     "Gestão de TI, IHC e Projetos de Extensão"
   ],
   stack: [
-  "C#", "Java", "PHP", "MySQL", "SQL"
+    "C#", "Java", "PHP", "MySQL", "SQL"
   ],
 };

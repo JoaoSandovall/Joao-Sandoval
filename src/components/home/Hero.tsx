@@ -18,9 +18,11 @@ export default function Hero({ onNavigate }: Props) {
             {profile.role}
           </p>
           <p className="mb-8 text-base leading-relaxed text-muted-foreground sm:mb-10 sm:text-lg">
-            Focado em sistemas de alta performance com{" "}
-            <span className="text-foreground">FastAPI, React 19 e Docker</span>. Transformo
-            processos manuais em APIs escaláveis e interfaces fluidas.
+            Desenvolvo desde landing pages rápidas para atrair clientes até APIs assíncronas 
+            complexas integradas com IA. Uso <span className="text-foreground">Python e Docker</span> para 
+            estruturar um backend seguro e com validação estrita, e <span className="text-foreground">React com TypeScript</span> para 
+            interfaces fluidas. O foco é entregar uma ferramenta que resolve o problema do negócio, 
+            com um código limpo que qualquer equipe técnica consegue manter.
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <a href="#contato" className="btn-primary">Vamos conversar</a>

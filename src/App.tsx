@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { SiteNav, SiteFooter } from "@/components/SiteNav";
-import CommandPalette from "@/components/CommandPalette";
+import { SiteNav, SiteFooter } from "@/components/layout/SiteNav";
+import CommandPalette from "@/components/ui/CommandPalette";
 import HomePage from "@/pages/HomePage";
 import NotesPage from "@/pages/NotesPage";
 import NoteDetailPage from "@/pages/NoteDetailPage";

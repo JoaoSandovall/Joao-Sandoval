@@ -11,9 +11,64 @@ export type Project = {
   solution: string[];
   outcome: string[];
   link?: string;
+  image?: string; // <- Nova propriedade para a pré-visualização
 };
 
 export const projects: Project[] = [
+  // --- FREELANCES ---
+  {
+    slug: "ipa-psicologia",
+    name: "IPA – Instituto de Psicologia Aplicada",
+    category: "Freelance",
+    year: "2026",
+    summary:
+      "SPA institucional desenvolvida do zero em React + TypeScript, com componentes acessíveis e build de produção otimizado.",
+    image: "/captura-ipa.png",
+    tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
+    context: "O instituto precisava de presença digital própria, rápida e fácil de atualizar.",
+    challenge: [
+      "Entregar uma interface leve e responsiva para um público não técnico.",
+      "Garantir acessibilidade e performance num ambiente de produção real.",
+    ],
+    solution: [
+      "Arquitetura de componentes funcionais com Shadcn UI e Radix.",
+      "Tipagem estrita no client-side com TypeScript.",
+      "Estilização responsiva com Tailwind CSS e build otimizado via Vite.",
+    ],
+    outcome: [
+      "Site institucional publicado, responsivo e simples de manter.",
+      "Componentes acessíveis e performance de build otimizada para produção.",
+    ],
+    link: "https://ipapsicologia.com.br/",
+  },
+  {
+    slug: "la-da-roca",
+    name: "Lá da Roça",
+    category: "Freelance",
+    year: "2026",
+    summary:
+      "Landing page para marca de produtos artesanais, com identidade visual forte e foco em conversão.",
+    image: "/captura-ladaroca.png",
+    tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
+    context:
+      "A marca precisava de uma presença digital que comunicasse autenticidade e qualidade artesanal ao mesmo tempo que facilitava o contato com clientes.",
+    challenge: [
+      "Traduzir a identidade visual da marca para uma interface digital fiel.",
+      "Garantir experiência fluida em dispositivos móveis, principal canal de acesso do público.",
+    ],
+    solution: [
+      "Landing page em React com estrutura de seções focada em conversão.",
+      "Componentização com Shadcn UI e Radix para consistência visual.",
+      "Responsividade mobile-first com Tailwind CSS.",
+    ],
+    outcome: [
+      "Página publicada com identidade visual coesa e experiência responsiva.",
+      "Ponto de contato digital ativo para a marca artesanal.",
+    ],
+    link: "https://www.ladarocadf.com.br/",
+  },
+
+  // --- ESTUDOS E SISTEMAS ---
   {
     slug: "auditor-de-minutas",
     name: "Auditor de Minutas com IA",
@@ -22,6 +77,7 @@ export const projects: Project[] = [
     summary:
       "Auditoria automatizada de minutas e documentos oficiais no MIDR, combinando extração por RegEx, validação com Pydantic e análise semântica por IA.",
     highlight: "de 25 minutos para menos de 5 segundos",
+    image: "/captura-revisao.png",
     tags: ["FastAPI", "Pydantic", "RegEx", "IA"],
     context:
       "A conferência de minutas era feita manualmente pela equipe, documento por documento, com alto risco de inconsistência entre versões.",
@@ -41,7 +97,7 @@ export const projects: Project[] = [
       "Tempo médio de processamento reduzido de 25 minutos para menos de 5 segundos.",
       "Padronização da auditoria e rastreabilidade das inconsistências encontradas.",
     ],
-    link: "https://github.com/JoaoSandovall",
+    link: "https://verificacao-minuta.vercel.app/",
   },
   {
     slug: "gestao-de-entidades",
@@ -89,54 +145,5 @@ export const projects: Project[] = [
     ],
     outcome: ["Fluxo completo de cadastro, login e gestão de perfil em produção."],
     link: "https://github.com/JoaoSandovall",
-  },
-  {
-    slug: "ipa-psicologia",
-    name: "IPA — Instituto de Psicologia Aplicada",
-    category: "Freelance",
-    year: "2026",
-    summary:
-      "SPA institucional desenvolvida do zero em React + TypeScript, com componentes acessíveis e build de produção otimizado.",
-    tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
-    context: "O instituto precisava de presença digital própria, rápida e fácil de atualizar.",
-    challenge: [
-      "Entregar uma interface leve e responsiva para um público não técnico.",
-      "Garantir acessibilidade e performance num ambiente de produção real.",
-    ],
-    solution: [
-      "Arquitetura de componentes funcionais com Shadcn UI e Radix.",
-      "Tipagem estrita no client-side com TypeScript.",
-      "Estilização responsiva com Tailwind CSS e build otimizado via Vite.",
-    ],
-    outcome: [
-      "Site institucional publicado, responsivo e simples de manter.",
-      "Componentes acessíveis e performance de build otimizada para produção.",
-    ],
-    link: "https://github.com/JoaoSandovall/IPA_Psicologia",
-  },
-  {
-    slug: "la-da-roca",
-    name: "Lá da Roça",
-    category: "Freelance",
-    year: "2026",
-    summary:
-      "Landing page para marca de produtos artesanais, com identidade visual forte e foco em conversão.",
-    tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
-    context:
-      "A marca precisava de uma presença digital que comunicasse autenticidade e qualidade artesanal ao mesmo tempo que facilitava o contato com clientes.",
-    challenge: [
-      "Traduzir a identidade visual da marca para uma interface digital fiel.",
-      "Garantir experiência fluida em dispositivos móveis, principal canal de acesso do público.",
-    ],
-    solution: [
-      "Landing page em React com estrutura de seções focada em conversão.",
-      "Componentização com Shadcn UI e Radix para consistência visual.",
-      "Responsividade mobile-first com Tailwind CSS.",
-    ],
-    outcome: [
-      "Página publicada com identidade visual coesa e experiência responsiva.",
-      "Ponto de contato digital ativo para a marca artesanal.",
-    ],
-    link: "https://github.com/JoaoSandovall",
-  },
+  }
 ];

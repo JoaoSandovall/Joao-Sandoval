@@ -17,7 +17,6 @@ export function SiteNav({ onNavigate, currentPage, onOpenPalette }: NavProps) {
         >
           JP<span className="text-primary">.</span>
         </button>
-
         <div className="flex items-center gap-4 text-sm text-muted-foreground sm:gap-6">
           <button
             onClick={() => {
@@ -38,13 +37,25 @@ export function SiteNav({ onNavigate, currentPage, onOpenPalette }: NavProps) {
           >
             Notas
           </button>
+
+          {/* NOVO VISUAL DO BOTÃO DE BUSCA AQUI */}
           <button
             onClick={onOpenPalette}
-            className="hidden items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:flex"
-            title="Abrir paleta de comandos"
+            className="hidden items-center gap-3 rounded-md border border-border bg-card/40 px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:flex"
+            title="Abrir pesquisa"
           >
-            <span>⌘K</span>
+            <div className="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Buscar...</span>
+            </div>
+            <kbd className="hidden rounded border border-border bg-background px-1.5 py-0.5 text-[10px] font-semibold sm:block">
+              Ctrl K
+            </kbd>
           </button>
+
           <button
             onClick={() => {
               onNavigate("home");

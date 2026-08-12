@@ -1,11 +1,10 @@
-import Hero from "@/components/Hero";
-import StackBar from "@/components/StackBar";
-import Sobre from "@/components/Sobre";
-import ServicesSection from "@/components/ServicesSection";
-import Experience from "@/components/Experience";
-import Formation from "@/components/Formation";
-import ProjectsSection from "@/components/ProjectsSection";
-import ContactSection from "@/components/ContactSection";
+import Hero from "@/components/home/Hero";
+import StackBar from "@/components/home/StackBar";
+import Sobre from "@/components/home/about";
+import Experience from "@/components/home/Experience";
+import Formation from "@/components/home/Formation";
+import ProjectsSection from "@/components/home/ProjectsSection";
+import ContactSection from "@/components/home/ContactSection";
 import type { Page } from "@/types/navigation";
 
 type Props = {
@@ -18,7 +17,6 @@ export default function HomePage({ onNavigate }: Props) {
       <Hero onNavigate={onNavigate} />
       <StackBar />
       <Sobre />
-      <ServicesSection />
       <Experience onNavigate={onNavigate} />
       <Formation />
       <ProjectsSection onNavigate={onNavigate} />
