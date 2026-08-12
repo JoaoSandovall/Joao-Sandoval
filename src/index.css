@@ -1,5 +1,5 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;700&display=swap');
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -27,43 +27,36 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-grid-line: var(--grid-line);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.205 0.020 267);
-  --foreground: oklch(0.965 0.005 265);
-  --card: oklch(0.255 0.019 266);
-  --card-foreground: oklch(0.965 0.005 265);
-  --primary: oklch(0.60 0.196 263);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.285 0.019 266);
-  --secondary-foreground: oklch(0.965 0.005 265);
-  --muted: oklch(0.285 0.019 266);
-  --muted-foreground: oklch(0.68 0.026 266);
-  --accent: oklch(0.60 0.196 263);
-  --accent-foreground: oklch(1 0 0);
+  --radius: 0.5rem;
+  --background: oklch(0.145 0.004 260);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.205 0.006 260);
+  --card-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.78 0.15 165);
+  --primary-foreground: oklch(0.16 0.02 165);
+  --secondary: oklch(0.24 0.006 260);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.24 0.006 260);
+  --muted-foreground: oklch(0.72 0.012 260);
+  --accent: oklch(0.78 0.15 165);
+  --accent-foreground: oklch(0.16 0.02 165);
   --destructive: oklch(0.6 0.2 27);
-  --border: oklch(0.62 0.026 266 / 22%);
-  --input: oklch(0.62 0.026 266 / 28%);
-  --ring: oklch(0.60 0.196 263);
-  --grid-line: oklch(0.62 0.026 266 / 12%);
+  --border: oklch(0.9 0.005 260 / 14%);
+  --input: oklch(0.9 0.005 260 / 20%);
+  --ring: oklch(0.78 0.15 165);
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --shadow-glow: 0 0 24px color-mix(in oklab, var(--primary) 35%, transparent);
   --shadow-panel: 0 24px 60px -30px oklch(0 0 0 / 0.65);
 }
 
 @layer base {
   * {
     border-color: var(--color-border);
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    *:not(input):not(textarea):not(select) { cursor: none !important; }
   }
 
   body {
@@ -77,21 +70,6 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
-}
-
-@utility grid-bg {
-  background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-@utility glow-top {
-  background-image: radial-gradient(
-    55% 60% at 20% 0%,
-    color-mix(in oklab, var(--primary) 16%, transparent),
-    transparent 70%
-  );
 }
 
 @utility panel {
@@ -173,8 +151,8 @@
   padding: 0.75rem 1.5rem;
   font-weight: 700;
   color: var(--primary-foreground);
-  transition: box-shadow 150ms ease;
-  &:hover { box-shadow: var(--shadow-glow); }
+  transition: opacity 150ms ease;
+  &:hover { opacity: 0.88; }
   @media (min-width: 640px) { padding: 1rem 2rem; }
 }
 

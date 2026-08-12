@@ -9,7 +9,7 @@ type NavProps = {
 
 export function SiteNav({ onNavigate, currentPage, onOpenPalette }: NavProps) {
   return (
-    <nav className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-40 border-b border-border bg-background">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:gap-6 sm:px-6 sm:py-4">
         <button
           onClick={() => onNavigate("home")}
@@ -29,6 +29,14 @@ export function SiteNav({ onNavigate, currentPage, onOpenPalette }: NavProps) {
             className="transition-colors hover:text-foreground"
           >
             Projetos
+          </button>
+          <button
+            onClick={() => onNavigate("notes")}
+            className={`transition-colors hover:text-foreground ${
+              currentPage === "notes" || currentPage === "note" ? "text-foreground" : ""
+            }`}
+          >
+            Notas
           </button>
           <button
             onClick={onOpenPalette}

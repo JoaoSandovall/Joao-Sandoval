@@ -44,6 +44,12 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
       },
     },
     {
+      id: "notes",
+      label: "Ver notas técnicas",
+      hint: "/notas",
+      action: () => onNavigate("notes"),
+    },
+    {
       id: "github",
       label: "Abrir GitHub",
       hint: "github.com/JoaoSandovall",
@@ -107,7 +113,7 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-[998] flex items-start justify-center bg-background/70 pt-[18vh] backdrop-blur-sm"
+      className="fixed inset-0 z-[998] flex items-start justify-center bg-background/90 pt-[18vh]"
       onClick={onClose}
     >
       <div

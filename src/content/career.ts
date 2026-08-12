@@ -15,7 +15,7 @@ export const experience: Job[] = [
       "API assíncrona em FastAPI para auditoria de documentos com RegEx, Pydantic e IA, além da reestruturação do Business Intelligence do setor em Power BI e DAX.",
   },
   {
-    role: "Jovem Aprendiz — Técnico de Rede",
+    role: "Jovem Aprendiz Técnico de Rede",
     company: "Claro — Brasília",
     period: "Out 2024 — Abr 2025",
     description:
@@ -34,19 +34,21 @@ export const freelancer = {
 export const education = {
   course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
   institution: "Universidade Católica de Brasília",
-  period: "Mar 2024 — Mai 2026",
-  status: "Concluído · Média 9,0",
+  period: "Mar 2024 — Jun 2026",
+  status: "Concluído • Média 9,0",
   description:
-    "Graduação focada na construção de sistemas web completos — do banco de dados à interface. O curso abrangeu desde fundamentos de engenharia de software até práticas modernas de DevOps e análise de dados.",
+    "Formação técnica com foco prático no ciclo completo de desenvolvimento. A matriz abrange desde a arquitetura de baixo nível e algoritmos, até a implementação de aplicações web/mobile, modelagem de banco de dados, esteiras DevOps e integrações com Inteligência Artificial e IoT.",
   disciplines: [
-    "Engenharia de Software & Metodologias Ágeis",
-    "Programação Orientada a Objetos",
-    "Banco de Dados Relacional & SQL",
-    "Desenvolvimento Web Full-Stack",
-    "DevOps, Contêineres & Infraestrutura",
-    "Redes e Sistemas Operacionais",
-    "Análise e Modelagem de Sistemas",
-    "Estruturas de Dados & Algoritmos",
+    "Arquitetura de Computadores e Sistemas Operacionais",
+    "Engenharia de Software, Requisitos e Métodos Ágeis",
+    "Algoritmos, Programação Estruturada e POO",
+    "Desenvolvimento Multiplataforma (Web e App)",
+    "Banco de Dados e Redes de Computadores",
+    "DevOps, Hiperautomatização e IoT",
+    "Inteligência Artificial, Robótica e Machine Learning",
+    "Gestão de TI, IHC e Projetos de Extensão"
   ],
-  stack: ["Python", "React", "TypeScript", "PostgreSQL", "Docker", "Git", "Linux", "Power BI"],
+  stack: [
+  "C#", "Java", "PHP", "MySQL", "SQL"
+  ],
 };

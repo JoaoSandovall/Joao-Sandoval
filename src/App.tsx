@@ -1,23 +1,48 @@
 import { useState, useEffect } from "react";
 import { SiteNav, SiteFooter } from "@/components/SiteNav";
-import CustomCursor from "@/components/CustomCursor";
 import CommandPalette from "@/components/CommandPalette";
 import HomePage from "@/pages/HomePage";
 import NotesPage from "@/pages/NotesPage";
 import NoteDetailPage from "@/pages/NoteDetailPage";
 import ProjectDetailPage from "@/pages/ProjectDetailPage";
-import { notes, projects } from "@/content";
+import { notes, projects, profile } from "@/content";
+import { pageToPath, pathToPage } from "@/types/navigation";
 import type { Page } from "@/types/navigation";
 
+function pageTitle(page: Page): string {
+  if (page.id === "home") return `${profile.name} — ${profile.role}`;
+  if (page.id === "notes") return `Notas técnicas — ${profile.name}`;
+  if (page.id === "note") {
+    const note = notes.find((n) => n.slug === page.slug);
+    return note ? `${note.title} — ${profile.name}` : `Nota — ${profile.name}`;
+  }
+  const project = projects.find((p) => p.slug === page.slug);
+  return project ? `${project.name} — ${profile.name}` : `Projeto — ${profile.name}`;
+}
+
 export default function App() {
-  const [page, setPage] = useState<Page>({ id: "home" });
+  const [page, setPage] = useState<Page>(() => pathToPage(window.location.pathname));
   const [paletteOpen, setPaletteOpen] = useState(false);
 
   const navigate = (next: Page | string) => {
     const resolved = typeof next === "string" ? ({ id: next } as Page) : next;
     setPage(resolved);
+    const path = pageToPath(resolved);
+    if (window.location.pathname !== path) {
+      window.history.pushState({}, "", path);
+    }
     window.scrollTo({ top: 0 });
   };
+
+  useEffect(() => {
+    document.title = pageTitle(page);
+  }, [page]);
+
+  useEffect(() => {
+    const onPopState = () => setPage(pathToPage(window.location.pathname));
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -32,7 +57,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <CustomCursor />
       <SiteNav
         onNavigate={navigate}
         currentPage={page.id}
