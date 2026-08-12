@@ -38,7 +38,7 @@ export const education = {
   period: "Mar 2024 — Jun 2026",
   status: "Concluído • Média 9,0",
   description:
-    "Formação técnica com foco prático no ciclo completo de desenvolvimento. A matriz abrange desde a arquitetura de baixo nível e algoritmos, até a implementação de aplicações web/mobile, modelagem de banco de dados, esteiras DevOps e integrações com Inteligência Artificial e IoT.",
+    "Graduação estruturada na base da Engenharia de Software e Administração de Bancos de Dados Relacionais. A prática acadêmica focou fortemente em Programação Orientada a Objetos (POO), construção de algoritmos e modelagem de dados.",
   disciplines: [
     "Arquitetura de Computadores e Sistemas Operacionais",
     "Engenharia de Software, Requisitos e Métodos Ágeis",
@@ -49,7 +49,5 @@ export const education = {
     "Inteligência Artificial, Robótica e Machine Learning",
     "Gestão de TI, IHC e Projetos de Extensão"
   ],
-  stack: [
-    "C#", "Java", "PHP", "MySQL", "SQL"
-  ],
+  stack: ["Java", "C", "SQL", "MySQL"],
 };

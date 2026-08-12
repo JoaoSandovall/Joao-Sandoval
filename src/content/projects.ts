@@ -10,15 +10,16 @@ export type Project = {
   challenge: string[];
   solution: string[];
   outcome: string[];
-  link?: string;
-  image?: string; // <- Nova propriedade para a pré-visualização
+  website?: string;
+  repository?: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
   // --- FREELANCES ---
   {
     slug: "ipa-psicologia",
-    name: "IPA – Instituto de Psicologia Aplicada",
+    name: "IPA — Instituto de Psicologia Aplicada",
     category: "Freelance",
     year: "2026",
     summary:
@@ -39,7 +40,8 @@ export const projects: Project[] = [
       "Site institucional publicado, responsivo e simples de manter.",
       "Componentes acessíveis e performance de build otimizada para produção.",
     ],
-    link: "https://ipapsicologia.com.br/",
+    website: "https://ipapsicologia.com.br/",
+    repository: "https://github.com/JoaoSandovall/IPA_Psicologia",
   },
   {
     slug: "la-da-roca",
@@ -65,7 +67,8 @@ export const projects: Project[] = [
       "Página publicada com identidade visual coesa e experiência responsiva.",
       "Ponto de contato digital ativo para a marca artesanal.",
     ],
-    link: "https://www.ladarocadf.com.br/",
+    website: "https://www.ladarocadf.com.br/",
+    repository: "https://github.com/JoaoSandovall/Ladaroca",
   },
 
   // --- ESTUDOS E SISTEMAS ---
@@ -97,7 +100,8 @@ export const projects: Project[] = [
       "Tempo médio de processamento reduzido de 25 minutos para menos de 5 segundos.",
       "Padronização da auditoria e rastreabilidade das inconsistências encontradas.",
     ],
-    link: "https://verificacao-minuta.vercel.app/",
+    website: "https://verificacao-minuta.vercel.app/",
+    repository: "https://github.com/JoaoSandovall/Verificacao_minuta",
   },
   {
     slug: "gestao-de-entidades",
@@ -105,24 +109,24 @@ export const projects: Project[] = [
     category: "Aplicação institucional",
     year: "2026",
     summary:
-      "Aplicação web para gerenciamento de dados institucionais de colegiados, com foco em integridade de dados e controle de versões do schema.",
-    tags: ["FastAPI", "React", "PostgreSQL", "Alembic"],
+      "Aplicação Full-Stack em FastAPI e React para o gerenciamento centralizado de dados institucionais, totalmente conteinerizada com Docker.",
+    tags: ["FastAPI", "React", "TypeScript", "SQLite", "Docker", "Shadcn UI"],
     context:
       "Os dados de entidades e membros viviam em planilhas paralelas, gerando duplicidade e informações conflitantes.",
     challenge: [
-      "Impedir cadastros duplicados em operações concorrentes.",
-      "Evoluir o banco sem perder histórico nem quebrar o ambiente em uso.",
+      "Substituir o controle manual por um sistema integrado e de fácil uso.",
+      "Impedir cadastros duplicados e centralizar as informações de forma relacional.",
     ],
     solution: [
-      "Modelagem relacional com bloqueio transacional para duplicidade.",
-      "Backend em FastAPI e frontend em React + TypeScript.",
-      "Controle de versão de schemas gerenciado pelo Alembic.",
+      "Backend em FastAPI integrado a um banco de dados SQLite para operações transacionais rápidas.",
+      "Frontend construído em React com TypeScript, utilizando componentes modulares do Shadcn UI.",
+      "Infraestrutura padronizada com Docker e Docker Compose para facilitar o deploy e a manutenção.",
     ],
     outcome: [
-      "Base única e consistente para os dados institucionais.",
-      "Migrações reversíveis e previsíveis a cada nova versão.",
+      "Base única e consistente para os dados institucionais, acessível via interface limpa e responsiva.",
+      "Ambiente de desenvolvimento e produção isolado e padronizado via contêineres.",
     ],
-    link: "https://github.com/JoaoSandovall",
+    repository: "https://github.com/JoaoSandovall/Banco_colegiados",
   },
   {
     slug: "agregador-de-links",
@@ -144,6 +148,6 @@ export const projects: Project[] = [
       "Migrações estruturais versionadas via Alembic.",
     ],
     outcome: ["Fluxo completo de cadastro, login e gestão de perfil em produção."],
-    link: "https://github.com/JoaoSandovall",
-  }
+    repository: "https://github.com/JoaoSandovall",
+  },
 ];

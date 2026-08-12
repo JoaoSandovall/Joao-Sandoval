@@ -16,8 +16,11 @@ function pageTitle(page: Page): string {
     const note = notes.find((n) => n.slug === page.slug);
     return note ? `${note.title} — ${profile.name}` : `Nota — ${profile.name}`;
   }
-  const project = projects.find((p) => p.slug === page.slug);
-  return project ? `${project.name} — ${profile.name}` : `Projeto — ${profile.name}`;
+  if (page.id === "project") {
+    const project = projects.find((p) => p.slug === page.slug);
+    return project ? `${project.name} — ${profile.name}` : `Projeto — ${profile.name}`;
+  }
+  return profile.name;
 }
 
 export default function App() {
@@ -81,20 +84,31 @@ function PageRenderer({
   onNavigate: (page: Page | string) => void;
 }) {
   if (page.id === "home") return <HomePage onNavigate={onNavigate} />;
+  
   if (page.id === "notes") return <NotesPage onNavigate={onNavigate} />;
-
+  
   if (page.id === "note") {
     const note = notes.find((n) => n.slug === page.slug);
     if (!note) return <NotFound message="Nota não encontrada." />;
     return <NoteDetailPage note={note} onBack={() => onNavigate({ id: "notes" })} />;
   }
-
+  
   if (page.id === "project") {
     const project = projects.find((p) => p.slug === page.slug);
     if (!project) return <NotFound message="Projeto não encontrado." />;
-    return <ProjectDetailPage project={project} onBack={() => onNavigate({ id: "home" })} />;
+    return (
+      <ProjectDetailPage 
+        project={project} 
+        onBack={() => {
+          onNavigate("home");
+          setTimeout(() => {
+            document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" });
+          }, 50);
+        }} 
+      />
+    );
   }
-
+  
   return null;
 }
 
