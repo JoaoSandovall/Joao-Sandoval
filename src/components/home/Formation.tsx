@@ -1,5 +1,5 @@
-import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
 import { education } from "@/content";
 
 export default function Formation() {

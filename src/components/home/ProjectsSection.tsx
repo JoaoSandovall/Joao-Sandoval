@@ -1,6 +1,6 @@
-import SectionHeading from "@/components/SectionHeading";
-import Reveal from "@/components/Reveal";
-import ProjectCard from "@/components/ProjectCard";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
+import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "@/content";
 import type { Page } from "@/types/navigation";
 
