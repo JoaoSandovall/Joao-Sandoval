@@ -79,31 +79,45 @@ function PageRenderer({
   page: Page;
   onNavigate: (page: Page | string) => void;
 }) {
-  if (page.id === "home") return <HomePage onNavigate={onNavigate} />;
-  
+  const pageKey = page.id === "project" ? `project-${page.slug}` : "home";
+
+  if (page.id === "home") {
+    return (
+      <div key={pageKey} className="animate-fade-in">
+        <HomePage onNavigate={onNavigate} />
+      </div>
+    );
+  }
+
   if (page.id === "project") {
     const project = projects.find((p) => p.slug === page.slug);
     if (!project) return <NotFound message="Projeto não encontrado." />;
     return (
-      <ProjectDetailPage 
-        project={project} 
-        onBack={() => {
-          onNavigate("home");
-          setTimeout(() => {
-            document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" });
-          }, 50);
-        }} 
-      />
+      <div key={pageKey} className="animate-fade-in">
+        <ProjectDetailPage
+          project={project}
+          onBack={() => {
+            onNavigate("home");
+            setTimeout(() => {
+              document.getElementById("projetos")?.scrollIntoView({ behavior: "smooth" });
+            }, 50);
+          }}
+        />
+      </div>
     );
   }
-  
+
   return null;
 }
 
 function NotFound({ message }: { message: string }) {
-  return <div className="px-6 py-20 text-center text-muted-foreground">{message}</div>;
+  return <div className="animate-fade-in px-6 py-20 text-center text-muted-foreground">{message}</div>;
 }
 
 function PageFallback() {
-  return <div className="px-6 py-24 text-center text-muted-foreground">Carregando…</div>;
+  return (
+    <div className="animate-fade-in px-6 py-24 text-center text-sm font-medium text-muted-foreground">
+      Carregando...
+    </div>
+  );
 }

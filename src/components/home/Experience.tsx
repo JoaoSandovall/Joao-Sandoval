@@ -15,11 +15,10 @@ export default function Experience({ onNavigate }: Props) {
   return (
     <div className="border-t border-border bg-card/10">
       <section className="section-spacing mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading>Experiência</SectionHeading>
+        <SectionHeading number="02">Experiência</SectionHeading>
 
         <div className="space-y-6 sm:space-y-8">
           
-          {/* 1. MAIS RECENTE: FREELANCER (MAI 2026 - ATUAL) */}
           <Reveal delay={0}>
             <article className="panel group grid gap-4 p-6 transition-colors hover:border-primary/50 sm:p-8 md:grid-cols-[240px_1fr] md:gap-8">
               <div className="flex flex-col items-start gap-2">
@@ -72,7 +71,6 @@ export default function Experience({ onNavigate }: Props) {
           {experience.map((job, i) => {
             const [companyName, companyLocation] = job.company.split(" — ");
             
-            // Filtra os projetos atrelados a esta experiência
             const jobProjects = job.projectSlugs 
               ? projects.filter(p => job.projectSlugs!.includes(p.slug)) 
               : [];
@@ -97,7 +95,6 @@ export default function Experience({ onNavigate }: Props) {
                       {job.description}
                     </p>
 
-                    {/* BOTÕES DE PROJETOS DESTA EXPERIÊNCIA (SE HOUVER) */}
                     {jobProjects.length > 0 && (
                       <div className="mt-6 flex flex-wrap gap-3">
                         {jobProjects.map((p) => (

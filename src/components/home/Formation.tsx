@@ -6,7 +6,7 @@ export default function Formation() {
   return (
     <div className="border-t border-border">
       <section className="section-spacing mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading>Formação Acadêmica</SectionHeading>
+        <SectionHeading number="03">Formação Acadêmica</SectionHeading>
         
         <Reveal>
           <div className="panel flex flex-col gap-8 p-6 sm:p-8">

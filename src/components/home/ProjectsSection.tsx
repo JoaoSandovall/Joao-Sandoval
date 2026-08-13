@@ -14,7 +14,7 @@ type ProjectGridProps = {
 };
 
 function ProjectGrid({ items, onNavigate }: ProjectGridProps) {
-  
+
   const useBento = items.length >= 3 && items.length % 2 === 1;
 
   return (
@@ -40,7 +40,7 @@ export default function ProjectsSection({ onNavigate }: Props) {
   return (
     <div className="border-t border-border">
       <section id="projetos" className="section-spacing mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading>Projetos em destaque</SectionHeading>
+        <SectionHeading number="04">Projetos em destaque</SectionHeading>
 
         {/* BLOCO 1: FREELANCE */}
         {freelanceProjects.length > 0 && (
