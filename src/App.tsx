@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { SiteNav, SiteFooter } from "@/components/layout/SiteNav";
 import CommandPalette from "@/components/ui/CommandPalette";
 import HomePage from "@/pages/HomePage";
-import NotesPage from "@/pages/NotesPage";
-import NoteDetailPage from "@/pages/NoteDetailPage";
-import ProjectDetailPage from "@/pages/ProjectDetailPage";
 import { notes, projects, profile } from "@/content";
 import { pageToPath, pathToPage } from "@/types/navigation";
 import type { Page } from "@/types/navigation";
+
+const NotesPage = lazy(() => import("@/pages/NotesPage"));
+const NoteDetailPage = lazy(() => import("@/pages/NoteDetailPage"));
+const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
 
 function pageTitle(page: Page): string {
   if (page.id === "home") return `${profile.name} — ${profile.role}`;
@@ -65,7 +66,9 @@ export default function App() {
         currentPage={page.id}
         onOpenPalette={() => setPaletteOpen(true)}
       />
-      <PageRenderer page={page} onNavigate={navigate} />
+      <Suspense fallback={<PageFallback />}>
+        <PageRenderer page={page} onNavigate={navigate} />
+      </Suspense>
       <SiteFooter />
       <CommandPalette
         open={paletteOpen}
@@ -114,4 +117,8 @@ function PageRenderer({
 
 function NotFound({ message }: { message: string }) {
   return <div className="px-6 py-20 text-center text-muted-foreground">{message}</div>;
+}
+
+function PageFallback() {
+  return <div className="px-6 py-24 text-center text-muted-foreground">Carregando…</div>;
 }

@@ -15,10 +15,9 @@ export default function Formation() {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               
               <div className="flex items-start gap-4 sm:gap-5">
-                {/* LOGO MENOR E MAIS ELEGANTE */}
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-black border border-border/50 sm:h-14 sm:w-14">
                   <img 
-                    src="/logo-catolica.png" 
+                    src="/logo-catolica.webp" 
                     alt="Logo UCB" 
                     className="h-full w-full object-contain p-1.5" 
                   />
@@ -49,7 +48,6 @@ export default function Formation() {
 
             </div>
 
-            {/* CONTEÚDO E TECNOLOGIAS BEM DIVIDIDOS */}
             <div className="grid gap-8 md:grid-cols-[1fr_300px]">
               <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                 {education.description}

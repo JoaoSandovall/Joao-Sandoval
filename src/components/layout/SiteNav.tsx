@@ -38,7 +38,6 @@ export function SiteNav({ onNavigate, currentPage, onOpenPalette }: NavProps) {
             Notas
           </button>
 
-          {/* NOVO VISUAL DO BOTÃO DE BUSCA AQUI */}
           <button
             onClick={onOpenPalette}
             className="hidden items-center gap-3 rounded-md border border-border bg-card/40 px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-foreground sm:flex"

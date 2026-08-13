@@ -29,6 +29,8 @@ export default function ProjectCard({ project, onNavigate }: Props) {
           <img
             src={project.image}
             alt={`Pré-visualização de ${project.name}`}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 hover:bg-black/10" />
@@ -38,6 +40,8 @@ export default function ProjectCard({ project, onNavigate }: Props) {
           <img
             src={project.image}
             alt={`Pré-visualização de ${project.name}`}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

@@ -24,7 +24,7 @@ export const projects: Project[] = [
     year: "2026",
     summary:
       "SPA institucional desenvolvida do zero em React + TypeScript, com componentes acessíveis e build de produção otimizado.",
-    image: "/captura-ipa.png",
+    image: "/captura-ipa.webp",
     tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
     context: "O instituto precisava de presença digital própria, rápida e fácil de atualizar.",
     challenge: [
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     year: "2026",
     summary:
       "Landing page para marca de produtos artesanais, com identidade visual forte e foco em conversão.",
-    image: "/captura-ladaroca.png",
+    image: "/captura-ladaroca.webp",
     tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
     context:
       "A marca precisava de uma presença digital que comunicasse autenticidade e qualidade artesanal ao mesmo tempo que facilitava o contato com clientes.",
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     summary:
       "Auditoria automatizada de minutas e documentos oficiais no MIDR, combinando extração por RegEx, validação com Pydantic e análise semântica por IA.",
     highlight: "de 25 minutos para menos de 5 segundos",
-    image: "/captura-revisao.png",
+    image: "/captura-revisao.webp",
     tags: ["FastAPI", "Pydantic", "RegEx", "IA"],
     context:
       "A conferência de minutas era feita manualmente pela equipe, documento por documento, com alto risco de inconsistência entre versões.",
