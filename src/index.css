@@ -62,6 +62,8 @@
 
   body {
     background-color: var(--color-background);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
     color: var(--color-foreground);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
@@ -188,6 +190,36 @@
     right: -14px;
     border-bottom: 2px solid var(--accent);
     border-right: 2px solid var(--accent);
+  }
+}
+
+@utility poster-block {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.02em 0.35em;
+  color: var(--primary-foreground);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -12%;
+    bottom: -12%;
+    left: -8%;
+    right: -55%;
+    background-color: var(--primary);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: -8%;
+    right: -48%;
+    bottom: -8%;
+    height: 4px;
+    background-color: var(--accent);
   }
 }
 
