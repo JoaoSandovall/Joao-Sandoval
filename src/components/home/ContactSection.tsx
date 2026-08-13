@@ -17,7 +17,7 @@ function ContactLink({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="flex items-center gap-4 text-sm transition-colors hover:text-primary sm:text-base"
+      className="flex w-fit items-center gap-4 text-sm transition-colors hover:text-primary sm:text-base"
     >
       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary sm:size-10">
         {label}
