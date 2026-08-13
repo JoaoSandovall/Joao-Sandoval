@@ -44,12 +44,6 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
       },
     },
     {
-      id: "notes",
-      label: "Ver notas técnicas",
-      hint: "/notas",
-      action: () => onNavigate("notes"),
-    },
-    {
       id: "github",
       label: "Abrir GitHub",
       hint: "github.com/JoaoSandovall",
@@ -88,6 +82,7 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!open) return;
+      
       if (e.key === "Escape") { onClose(); return; }
       if (e.key === "ArrowDown") {
         e.preventDefault();
@@ -121,7 +116,7 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 border-b border-border px-4 py-3">
-          <span className="text-muted-foreground">⌘</span>
+          <span className="text-muted-foreground">→</span>
           <input
             ref={inputRef}
             value={query}
@@ -131,7 +126,7 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
           />
           <kbd className="label rounded border border-border px-1.5 py-0.5">ESC</kbd>
         </div>
-
+        
         <ul className="max-h-72 overflow-y-auto py-2">
           {filtered.length === 0 && (
             <li className="label px-4 py-8 text-center">Nenhum resultado</li>
@@ -155,7 +150,7 @@ export default function CommandPalette({ open, onClose, onNavigate }: Props) {
         </ul>
 
         <div className="flex items-center gap-4 border-t border-border px-4 py-2">
-          <span className="label">↑↓ navegar</span>
+          <span className="label">↓↑ navegar</span>
           <span className="label">↵ abrir</span>
           <span className="label">ESC fechar</span>
         </div>

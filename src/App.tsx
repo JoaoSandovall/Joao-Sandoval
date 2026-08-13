@@ -2,21 +2,14 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import { SiteNav, SiteFooter } from "@/components/layout/SiteNav";
 import CommandPalette from "@/components/ui/CommandPalette";
 import HomePage from "@/pages/HomePage";
-import { notes, projects, profile } from "@/content";
+import { projects, profile } from "@/content";
 import { pageToPath, pathToPage } from "@/types/navigation";
 import type { Page } from "@/types/navigation";
 
-const NotesPage = lazy(() => import("@/pages/NotesPage"));
-const NoteDetailPage = lazy(() => import("@/pages/NoteDetailPage"));
 const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
 
 function pageTitle(page: Page): string {
   if (page.id === "home") return `${profile.name} — ${profile.role}`;
-  if (page.id === "notes") return `Notas técnicas — ${profile.name}`;
-  if (page.id === "note") {
-    const note = notes.find((n) => n.slug === page.slug);
-    return note ? `${note.title} — ${profile.name}` : `Nota — ${profile.name}`;
-  }
   if (page.id === "project") {
     const project = projects.find((p) => p.slug === page.slug);
     return project ? `${project.name} — ${profile.name}` : `Projeto — ${profile.name}`;
@@ -87,14 +80,6 @@ function PageRenderer({
   onNavigate: (page: Page | string) => void;
 }) {
   if (page.id === "home") return <HomePage onNavigate={onNavigate} />;
-  
-  if (page.id === "notes") return <NotesPage onNavigate={onNavigate} />;
-  
-  if (page.id === "note") {
-    const note = notes.find((n) => n.slug === page.slug);
-    if (!note) return <NotFound message="Nota não encontrada." />;
-    return <NoteDetailPage note={note} onBack={() => onNavigate({ id: "notes" })} />;
-  }
   
   if (page.id === "project") {
     const project = projects.find((p) => p.slug === page.slug);

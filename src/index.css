@@ -28,29 +28,31 @@
   --color-ring: var(--ring);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 :root {
-  --radius: 0.5rem;
-  --background: oklch(0.145 0.004 260);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.205 0.006 260);
-  --card-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.78 0.15 165);
-  --primary-foreground: oklch(0.16 0.02 165);
-  --secondary: oklch(0.24 0.006 260);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.24 0.006 260);
-  --muted-foreground: oklch(0.72 0.012 260);
-  --accent: oklch(0.78 0.15 165);
-  --accent-foreground: oklch(0.16 0.02 165);
-  --destructive: oklch(0.6 0.2 27);
-  --border: oklch(0.9 0.005 260 / 14%);
-  --input: oklch(0.9 0.005 260 / 20%);
-  --ring: oklch(0.78 0.15 165);
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --shadow-panel: 0 24px 60px -30px oklch(0 0 0 / 0.65);
+  --radius: 4px;
+  --background: #E7E1D2;
+  --foreground: #201C15;
+  --card: #F2EEE3;
+  --card-foreground: #201C15;
+  --primary: #23407D;
+  --primary-foreground: #F2EEE3;
+  --secondary: #DBD3BC;
+  --secondary-foreground: #201C15;
+  --muted: #DBD3BC;
+  --muted-foreground: #6C6250;
+  --accent: #A23F26;
+  --accent-foreground: #F2EEE3;
+  --destructive: #A23325;
+  --border: #C8BEA3;
+  --input: #C8BEA3;
+  --ring: #23407D;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --shadow-panel: 0 20px 46px -26px rgb(32 28 21 / 0.38);
 }
 
 @layer base {
@@ -67,53 +69,51 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 }
 
 @utility panel {
   background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
+  border-radius: 2px;
 }
 
-/* Metadata label: small-caps, muted — category, date, location */
 @utility label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--muted-foreground);
 }
 
-/* Inline tech tag on project cards */
 @utility tag {
+  font-family: var(--font-mono);
   border: 1px solid var(--border);
   background-color: var(--background);
-  border-radius: var(--radius-sm);
+  border-radius: 1px;
   padding: 0.25rem 0.5rem;
   font-size: 0.625rem;
   line-height: 1.5;
 }
 
-/* Inline tech tag on detail pages */
 @utility tag-outline {
+  font-family: var(--font-mono);
   border: 1px solid var(--border);
   background-color: var(--card);
-  border-radius: var(--radius-sm);
+  border-radius: 1px;
   padding: 0.25rem 0.75rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--muted-foreground);
 }
 
-/* Back navigation link */
 @utility back-link {
   font-size: 0.875rem;
   color: var(--primary);
   &:hover { text-decoration: underline; }
 }
 
-/* Decorative dash bullet in lists */
 @utility bullet {
   display: block;
   margin-top: 0.65em;
@@ -123,7 +123,6 @@
   background-color: var(--primary);
 }
 
-/* Consistent vertical padding for all main sections */
 @utility section-spacing {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -133,7 +132,6 @@
   }
 }
 
-/* Decorative rule beside section headings */
 @utility section-rule {
   display: block;
   height: 1px;
@@ -141,7 +139,6 @@
   background-color: var(--border);
 }
 
-/* Primary CTA button */
 @utility btn-primary {
   display: inline-flex;
   align-items: center;
@@ -155,7 +152,6 @@
   @media (min-width: 640px) { padding: 1rem 2rem; }
 }
 
-/* Outline button */
 @utility btn-outline {
   display: inline-flex;
   align-items: center;
@@ -166,4 +162,31 @@
   transition: border-color 150ms ease;
   &:hover { border-color: var(--primary); }
   @media (min-width: 640px) { padding: 1rem 2rem; }
+}
+
+@utility blueprint-frame {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -14px;
+    left: -14px;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+  }
+
+  &::after {
+    bottom: -14px;
+    right: -14px;
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+  }
 }

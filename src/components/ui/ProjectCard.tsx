@@ -8,7 +8,7 @@ type Props = {
 
 function CategoryBadge({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase text-primary">
+    <div className="border border-primary/30 px-2.5 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-wider text-primary">
       {children}
     </div>
   );
@@ -83,13 +83,13 @@ export default function ProjectCard({ project, onNavigate }: Props) {
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="currentColor" 
-            strokeWidth="2.5" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
+            strokeWidth="1.75" 
+            strokeLinecap="butt" 
+            strokeLinejoin="miter" 
             className="transition-transform group-hover:translate-x-1"
           >
-            <path d="M5 12h14"></path>
-            <path d="m12 5 7 7-7 7"></path>
+            <line x1="4" y1="12" x2="19" y2="12"></line>
+            <polyline points="13 6 19 12 13 18"></polyline>
           </svg>
         </button>
       </div>

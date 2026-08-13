@@ -8,8 +8,8 @@ type Props = {
 export default function Hero({ onNavigate }: Props) {
   return (
     <header className="border-b border-border">
-      <div className="mx-auto max-w-6xl px-4 pt-20 pb-16 sm:px-6 sm:pt-28 sm:pb-24">
-        <div className="max-w-3xl">
+      <div className="mx-auto max-w-6xl px-4 pt-24 pb-16 sm:px-6 sm:pt-32 sm:pb-24">
+        <div className="blueprint-frame ml-4 max-w-3xl sm:ml-6">
           <span className="label mb-4 block text-primary">{profile.location}</span>
           <h1 className="mb-4 font-display text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
             João Pedro Sandoval <span className="text-primary">Veras.</span>

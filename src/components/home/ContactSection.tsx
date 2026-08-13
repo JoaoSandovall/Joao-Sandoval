@@ -34,10 +34,10 @@ export default function ContactSection() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <div>
             <h2 className="mb-4 font-display text-2xl font-bold sm:mb-6 sm:text-3xl">
-              Vamos construir o próximo sistema juntos?
+              Como posso somar ao seu projeto?
             </h2>
             <p className="mb-6 text-sm leading-relaxed text-muted-foreground sm:mb-8 sm:text-base">
-              Disponível para projetos freelance, consultoria técnica e desenvolvimento de MVPs.
+              Trabalho de forma independente criando softwares e automatizando rotinas. Se faz sentido para o seu negócio, vamos conversar.
             </p>
             <div className="space-y-3 sm:space-y-4">
               <ContactLink href={`mailto:${profile.email}`} label="@">

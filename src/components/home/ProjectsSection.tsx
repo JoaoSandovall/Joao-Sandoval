@@ -8,6 +8,30 @@ type Props = {
   onNavigate: (page: Page | string) => void;
 };
 
+type ProjectGridProps = {
+  items: typeof projects;
+  onNavigate: Props["onNavigate"];
+};
+
+function ProjectGrid({ items, onNavigate }: ProjectGridProps) {
+  
+  const useBento = items.length >= 3 && items.length % 2 === 1;
+
+  return (
+    <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
+      {items.map((project, i) => (
+        <Reveal
+          key={project.slug}
+          delay={i * 80}
+          className={`flex ${useBento && i === 0 ? "md:col-span-2" : ""}`}
+        >
+          <ProjectCard project={project} onNavigate={onNavigate} />
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 export default function ProjectsSection({ onNavigate }: Props) {
 
   const freelanceProjects = projects.filter((p) => p.category === "Freelance");
@@ -24,13 +48,7 @@ export default function ProjectsSection({ onNavigate }: Props) {
             <h3 className="mb-6 font-display text-xl font-bold text-foreground sm:text-2xl">
               Trabalhos Freelance
             </h3>
-            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
-              {freelanceProjects.map((project, i) => (
-                <Reveal key={project.slug} delay={i * 80} className="flex">
-                  <ProjectCard project={project} onNavigate={onNavigate} />
-                </Reveal>
-              ))}
-            </div>
+            <ProjectGrid items={freelanceProjects} onNavigate={onNavigate} />
           </div>
         )}
 
@@ -40,13 +58,7 @@ export default function ProjectsSection({ onNavigate }: Props) {
             <h3 className="mb-6 font-display text-xl font-bold text-foreground sm:text-2xl">
               Sistemas & Estudos de Caso
             </h3>
-            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
-              {systemProjects.map((project, i) => (
-                <Reveal key={project.slug} delay={i * 80} className="flex">
-                  <ProjectCard project={project} onNavigate={onNavigate} />
-                </Reveal>
-              ))}
-            </div>
+            <ProjectGrid items={systemProjects} onNavigate={onNavigate} />
           </div>
         )}
 

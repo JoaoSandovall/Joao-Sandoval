@@ -6,21 +6,21 @@ type Props = {
 };
 
 function SectionIcon({ type }: { type: "challenge" | "solution" | "outcome" }) {
-  const baseClass = "flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary";
+  const baseClass = "flex size-10 shrink-0 items-center justify-center border border-primary/30 text-primary";
   
   if (type === "challenge") return (
     <div className={baseClass}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="butt" strokeLinejoin="miter"><rect x="3" y="3" width="18" height="18"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16.5" x2="12" y2="16.51"/></svg>
     </div>
   );
   if (type === "solution") return (
     <div className={baseClass}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="butt" strokeLinejoin="miter"><path d="M9 4c-2.5 0-3 2-3 4v2c0 1.5-.5 2-2 2 1.5 0 2 .5 2 2v2c0 2 .5 4 3 4"/><path d="M15 4c2.5 0 3 2 3 4v2c0 1.5.5 2 2 2-1.5 0-2 .5-2 2v2c0 2-.5 4-3 4"/></svg>
     </div>
   );
   return (
     <div className={baseClass}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15V2"/><path d="M19 17a10 10 0 1 1-14 0"/><path d="m11 14 1 1 4-4"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="butt" strokeLinejoin="miter"><rect x="3" y="3" width="18" height="18"/><polyline points="7 12.5 10.5 16 17 8"/></svg>
     </div>
   );
 }
@@ -35,7 +35,7 @@ function Section({ heading, type, items }: { heading: string; type: "challenge" 
       <ul className="space-y-4">
         {items.map((item) => (
           <li key={item} className="flex gap-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-1 shrink-0 text-primary/60"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="butt" strokeLinejoin="miter" className="mt-1 shrink-0 text-primary/70"><polyline points="4 13 9 18 20 6"/></svg>
             <span>{item}</span>
           </li>
         ))}
@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ project, onBack }: Props) {
         onClick={onBack} 
         className="group mb-10 inline-flex cursor-pointer items-center gap-2 font-display text-sm font-bold text-muted-foreground transition-colors hover:text-foreground sm:text-base"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m15 18-6-6 6-6"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="butt" strokeLinejoin="miter" className="transition-transform group-hover:-translate-x-1"><polyline points="15 18 9 12 15 6"/><line x1="9" y1="12" x2="20" y2="12"/></svg>
         Voltar para projetos
       </button>
       

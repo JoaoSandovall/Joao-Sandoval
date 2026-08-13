@@ -10,8 +10,6 @@ export default function Formation() {
         
         <Reveal>
           <div className="panel flex flex-col gap-8 p-6 sm:p-8">
-            
-            {/* HEADER DA FORMAÇÃO */}
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
               
               <div className="flex items-start gap-4 sm:gap-5">
@@ -37,10 +35,9 @@ export default function Formation() {
 
               {/* BADGE DE MÉDIA */}
               <div className="shrink-0 pt-2 sm:pt-0">
-                <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary shadow-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                <span className="inline-flex items-center gap-2 border border-primary/30 px-3 py-1.5 font-mono text-xs font-semibold text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="butt" strokeLinejoin="miter">
+                    <polyline points="4 13 10 19 20 5"></polyline>
                   </svg>
                   {education.status}
                 </span>
