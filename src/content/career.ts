@@ -33,21 +33,11 @@ export const freelancer = {
 };
 
 export const education = {
-  course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+  course: "Graduação em Análise e Desenvolvimento de Sistemas",
   institution: "Universidade Católica de Brasília",
   period: "Mar 2024 — Jun 2026",
   status: "Concluído • Média 9,0",
   description:
-    "Graduação estruturada na base da Engenharia de Software e Administração de Bancos de Dados Relacionais. A prática acadêmica focou fortemente em Programação Orientada a Objetos (POO), construção de algoritmos e modelagem de dados.",
-  disciplines: [
-    "Arquitetura de Computadores e Sistemas Operacionais",
-    "Engenharia de Software, Requisitos e Métodos Ágeis",
-    "Algoritmos, Programação Estruturada e POO",
-    "Desenvolvimento Multiplataforma (Web e App)",
-    "Banco de Dados e Redes de Computadores",
-    "DevOps, Hiperautomatização e IoT",
-    "Inteligência Artificial, Robótica e Machine Learning",
-    "Gestão de TI, IHC e Projetos de Extensão"
-  ],
-  stack: ["Java", "C", "SQL", "MySQL"],
+    "Formação focada no ciclo de vida do software. A matriz começou na base com sistemas operacionais, redes e programação estruturada, evoluindo para a criação prática de interfaces web/mobile e modelagem de banco de dados. Também passei por engenharia de requisitos, DevOps e IA.",
+  stack: ["Java", "C", "PHP", "SQL", "MySQL"],
 };

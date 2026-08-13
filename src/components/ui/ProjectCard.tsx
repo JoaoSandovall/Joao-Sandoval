@@ -24,7 +24,7 @@ export default function ProjectCard({ project, onNavigate }: Props) {
           target="_blank"
           rel="noreferrer"
           className="relative aspect-video w-full overflow-hidden border-b border-border bg-muted/20 cursor-pointer focus:outline-none"
-          aria-label={`Acessar site do projeto ${project.name}`}
+          aria-label={`Site do projeto ${project.name}`}
         >
           <img
             src={project.image}

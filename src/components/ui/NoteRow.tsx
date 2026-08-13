@@ -10,7 +10,6 @@ type Props = {
 export default function NoteRow({ note, onNavigate, showSummary = false }: Props) {
   return (
     <button
-      onClick={() => onNavigate({ id: "note", slug: note.slug })}
       className="group flex w-full items-center justify-between gap-4 py-6 text-left"
     >
       <div className="min-w-0">

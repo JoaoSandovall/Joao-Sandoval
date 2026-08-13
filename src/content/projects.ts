@@ -22,8 +22,7 @@ export const projects: Project[] = [
     name: "IPA — Instituto de Psicologia Aplicada",
     category: "Freelance",
     year: "2026",
-    summary:
-      "SPA institucional desenvolvida do zero em React + TypeScript, com componentes acessíveis e build de produção otimizado.",
+    summary: "A página da clínica era desestruturada e genérica. Fui contratado para recriar a plataforma do zero, entregando uma interface profissional e acessível que uniu os pedidos da cliente com minhas sugestões.",
     image: "/captura-ipa.webp",
     tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
     context: "O instituto precisava de presença digital própria, rápida e fácil de atualizar.",
@@ -48,8 +47,7 @@ export const projects: Project[] = [
     name: "Lá da Roça",
     category: "Freelance",
     year: "2026",
-    summary:
-      "Landing page para marca de produtos artesanais, com identidade visual forte e foco em conversão.",
+    summary: "A marca de produtos artesanais precisava iniciar sua presença digital. Desenvolvi uma landing page para estruturar essa nova identidade, transmitindo a segurança e o profissionalismo necessários para atrair clientes.",
     image: "/captura-ladaroca.webp",
     tags: ["React", "TypeScript", "Shadcn UI", "Tailwind", "Vite"],
     context:
@@ -108,8 +106,7 @@ export const projects: Project[] = [
     name: "Gestão de Entidades (Colegiados)",
     category: "Aplicação institucional",
     year: "2026",
-    summary:
-      "Aplicação Full-Stack em FastAPI e React para o gerenciamento centralizado de dados institucionais, totalmente conteinerizada com Docker.",
+    summary: "O projeto nasceu para apresentar à coordenação um novo modelo de gestão. O sistema simplifica a atualização de colegiados e representantes, garante a veracidade dos dados e já foi estruturado para escalar para outras secretarias.",
     tags: ["FastAPI", "React", "TypeScript", "SQLite", "Docker", "Shadcn UI"],
     context:
       "Os dados de entidades e membros viviam em planilhas paralelas, gerando duplicidade e informações conflitantes.",

@@ -74,7 +74,7 @@ export default function ProjectDetailPage({ project, onBack }: Props) {
         <div className="flex flex-wrap gap-4">
           {project.website && (
             <a href={project.website} target="_blank" rel="noreferrer" className="btn-primary cursor-pointer">
-              Acessar site ao vivo
+              Acessar site
             </a>
           )}
           {project.repository && (

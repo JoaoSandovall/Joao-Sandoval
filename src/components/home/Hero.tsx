@@ -17,13 +17,11 @@ export default function Hero({ onNavigate }: Props) {
           <p className="mb-6 font-display text-xl font-bold text-primary sm:text-2xl">
             {profile.role}
           </p>
+          
           <p className="mb-8 text-base leading-relaxed text-muted-foreground sm:mb-10 sm:text-lg">
-            Desenvolvo desde landing pages rápidas para atrair clientes até APIs assíncronas 
-            complexas integradas com IA. Uso <span className="text-foreground">Python e Docker</span> para 
-            estruturar um backend seguro e com validação estrita, e <span className="text-foreground">React com TypeScript</span> para 
-            interfaces fluidas. O foco é entregar uma ferramenta que resolve o problema do negócio, 
-            com um código limpo que qualquer equipe técnica consegue manter.
+            Formado em Análise e Desenvolvimento de Sistemas, atuo como desenvolvedor criando sites, sistemas e APIs. Minhas principais ferramentas de trabalho são <span className="text-foreground">Python, React e TypeScript</span>.
           </p>
+
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <a href="#contato" className="btn-primary">Vamos conversar</a>
             <a href="#projetos" className="btn-outline">Ver projetos</a>

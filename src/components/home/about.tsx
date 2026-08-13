@@ -5,22 +5,23 @@ export default function Sobre() {
   return (
     <section className="section-spacing mx-auto max-w-6xl px-4 sm:px-6">
       <SectionHeading>Sobre</SectionHeading>
-      <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
+      
+      <div className="grid items-center gap-12 lg:grid-cols-[1fr_320px]">
         
         {/* COLUNA DE TEXTO */}
         <div className="space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
           <p>
-            Sou desenvolvedor Full-Stack focado em construir <span className="text-foreground">aplicações web previsíveis e de alta performance</span>. No front-end, crio Single Page Applications (SPAs) rápidas e responsivas com React e TypeScript, garantindo tipagem estrita no client-side e interfaces estáveis.
+            Meu objetivo na área de tecnologia se resume a duas coisas: <span className="text-foreground">estudar e gerar resultados reais.</span>
           </p>
           <p>
-            No back-end, construo <span className="text-foreground">APIs REST assíncronas em Python</span> para lidar com alta concorrência. Minha atuação técnica envolve a modelagem de bancos relacionais, extração de dados não estruturados (integrada com IA) e validação rigorosa de schemas via Pydantic. Para garantir estabilidade em produção, gerencio a infraestrutura com <span className="text-foreground">Docker</span> e o controle de versão estrutural do banco via <span className="text-foreground">Alembic</span>.
+            Desenvolvo aplicações web usando <span className="text-foreground">Python, Docker, React e TypeScript</span>. Sem atalhos e sem complicar o que deve ser simples. Construo sistemas organizados para que o cliente tenha uma ferramenta útil e a equipe tenha um código fácil de escalar.
           </p>
           <p>
-            Mais do que escrever código, desenvolvo software para resolver gargalos reais. Durante minha atuação no MIDR, estruturei uma API que automatizou a auditoria de documentos oficiais, <span className="text-foreground">reduzindo o tempo de análise de 25 minutos para menos de 5 segundos</span>. É essa mesma engenharia focada em resultados que aplico nos projetos em que atuo hoje.
+            No fim do dia, acredito que o melhor código é aquele que cumpre o seu papel sem dor de cabeça. Busco sempre evoluir tecnicamente para construir softwares que não apenas rodem bem, mas que realmente facilitem a vida de quem os utiliza.
           </p>
         </div>
 
-        {/* COLUNA VISUAL - PILARES TÉCNICOS */}
+        {/* COLUNA VISUAL - PILARES */}
         <div className="flex flex-col gap-4">
           <Reveal>
             <div className="panel flex flex-col justify-center p-6">
@@ -55,7 +56,7 @@ export default function Sobre() {
             </div>
           </Reveal>
         </div>
-
+        
       </div>
     </section>
   );
