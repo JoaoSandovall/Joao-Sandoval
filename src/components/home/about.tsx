@@ -12,7 +12,7 @@ export default function Sobre() {
         {/* COLUNA DE TEXTO */}
         <div className="space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
           <p>
-            Meu objetivo na área de tecnologia se resume a duas coisas: <span className="text-foreground">estudar continuamente e gerar resultados reais.</span>
+            Meu objetivo na área de tecnologia se resume a duas coisas: <span className="text-foreground">estudar e gerar resultados reais.</span>
           </p>
           <p>
             Desenvolvo aplicações web do zero usando <span className="text-foreground">Python, Docker, React e TypeScript</span>. Sem atalhos e sem complicar o que deve ser simples. Construo sistemas organizados para que o cliente tenha uma ferramenta útil e a equipe técnica tenha um código fácil de escalar.
